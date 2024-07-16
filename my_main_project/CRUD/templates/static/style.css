@@ -1,0 +1,8 @@
+.navbar,.navbar-brand, .nav-link, .header{
+    background-color: black !important;
+  color: white !important; /* Ensures text color is white */
+}
+.navbar-toggler-icon {
+    background-color: dimgray;
+    border-radius: 5px;
+}

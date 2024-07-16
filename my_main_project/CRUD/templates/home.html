@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My Site{% endblock %}
+
+{% block content %}
+<div class="container">
+     <h2>Student Data</h2>
+    <a type="button" class="btn btn-dark" href="{% url 'addStudent' %}">Add Student</a>
+
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Roll No.</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for student in students %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{student.roll_no}}</td>
+      <td><a type="button" class="btn btn-secondary" href="{% url 'viewDetails' student.roll_no %}">View</a></td>
+      <td><a type="button" class="btn btn-warning" href="{% url 'editStudent' student.roll_no %}">Edit</a></td>
+      <td><a type="button" class="btn btn-danger" href="{% url 'deleteStudent' student.roll_no %}">Delete</a></td>
+    </tr>
+  {% endfor%}
+
+  </tbody>
+</table>
+</div>
+
+{% endblock %}

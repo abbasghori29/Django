@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My Site{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <h2 >{{student.name}}'s Data</h2>
+
+    </div>
+
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Roll No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>{{student.roll_no}}</td>
+        <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.email}}</td>
+        <td>{{student.address}}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+{% endblock %}
